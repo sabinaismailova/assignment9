@@ -2,8 +2,8 @@ import React from "react";
 
 function AccountBalance(props) {
     return (
-        <div>
-            <div>AccountBalance: {props.creds - props.debs}</div>
+        <div className={props.className} style={props.style}>
+            Account Balance: ${props.creds - props.debs}
         </div>
     )
 }

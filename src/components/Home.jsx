@@ -3,9 +3,10 @@ import AccountBalance from './AccountBalance'
 
 function Home(props) {
   return (
-    <div>
-        <div>Home</div>
-        <AccountBalance creds={props.creds} debs={props.debs} setAccountBalance={props.setAccountBalance}/>
+    <div style={{display:"flex", justifyContent:"center", margin:"120px"}}>
+        <div className="accountBalance">
+            <AccountBalance className="home" creds={props.creds} debs={props.debs}/>
+        </div>
     </div>
   )
 }
