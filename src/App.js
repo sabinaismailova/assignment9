@@ -92,14 +92,10 @@ function App() {
             </li>
           </ul>
         </nav>
-        <div style={{display:"flex", justifyContent:"center", margin:"120px"}}>
-            <div className="accountBalance">
-                <AccountBalance className="home" creds={creds} debs={debs}/>
-            </div>
-        </div>
 
         {/* Routes */}
         <Routes>
+            <Route path="/assignment9" element={<Home creds={creds} debs={debs}/>} />
             <Route path="/" element={<Home creds={creds} debs={debs}/>} />
             <Route path="/debits" element={<AddDebits debs={debs} creds={creds} debitEntries={debitEntries} handleDebitDataEntry={handleDebitDataEntry}/>} />
             <Route path="/credits" element={<AddCredits creds={creds} debs={debs} creditEntries={creditEntries} handleCreditDataEntry={handleCreditDataEntry}/>} />
