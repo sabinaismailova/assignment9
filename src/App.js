@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import UserProfile from "./components/UserProfile";
 import AddDebits from "./components/AddDebits";
 import AddCredits from "./components/AddCredits";
+import AccountBalance from "./components/AccountBalance";
 
 function App() {
   const [creds, setCreds] = useState(0);
@@ -91,6 +92,11 @@ function App() {
             </li>
           </ul>
         </nav>
+        <div style={{display:"flex", justifyContent:"center", margin:"120px"}}>
+            <div className="accountBalance">
+                <AccountBalance className="home" creds={creds} debs={debs}/>
+            </div>
+        </div>
 
         {/* Routes */}
         <Routes>
