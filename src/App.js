@@ -87,7 +87,7 @@ function App() {
               <Link to="/assignment9/credits">Credits</Link>
             </li>
             <li>
-              <Link to="/assignmnet9/userProfile">User Profile</Link>
+              <Link to="/assignment9/userProfile">User Profile</Link>
             </li>
           </ul>
         </nav>
@@ -95,8 +95,8 @@ function App() {
         {/* Routes */}
         <Routes>
             <Route path="/assignment9" element={<Home creds={creds} debs={debs}/>} />
-            <Route path="/assignmnt9/debits" element={<AddDebits debs={debs} creds={creds} debitEntries={debitEntries} handleDebitDataEntry={handleDebitDataEntry}/>} />
-            <Route path="/assignmnet9/credits" element={<AddCredits creds={creds} debs={debs} creditEntries={creditEntries} handleCreditDataEntry={handleCreditDataEntry}/>} />
+            <Route path="/assignment9/debits" element={<AddDebits debs={debs} creds={creds} debitEntries={debitEntries} handleDebitDataEntry={handleDebitDataEntry}/>} />
+            <Route path="/assignment9/credits" element={<AddCredits creds={creds} debs={debs} creditEntries={creditEntries} handleCreditDataEntry={handleCreditDataEntry}/>} />
             <Route path="/assignment9/userProfile/*" element={<UserProfile />} />
         </Routes>
       </div>
