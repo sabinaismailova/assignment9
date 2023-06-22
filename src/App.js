@@ -1,12 +1,11 @@
-import React, {useEffect, useState, useRef} from "react";
+import React, {useEffect, useState} from "react";
 import axios from 'axios';
-import { BrowserRouter as Router, Routes, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Home from "./components/Home";
 import UserProfile from "./components/UserProfile";
 import AddDebits from "./components/AddDebits";
 import AddCredits from "./components/AddCredits";
-import AccountBalance from "./components/AccountBalance";
 
 function App() {
   const [creds, setCreds] = useState(0);
@@ -79,16 +78,16 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/assignment9">Home</Link>
             </li>
             <li>
-              <Link to="/debits">Debits</Link>
+              <Link to="/assignment9/debits">Debits</Link>
             </li>
             <li>
-              <Link to="/credits">Credits</Link>
+              <Link to="/assignment9/credits">Credits</Link>
             </li>
             <li>
-              <Link to="/userProfile">User Profile</Link>
+              <Link to="/assignmnet9/userProfile">User Profile</Link>
             </li>
           </ul>
         </nav>
@@ -96,10 +95,9 @@ function App() {
         {/* Routes */}
         <Routes>
             <Route path="/assignment9" element={<Home creds={creds} debs={debs}/>} />
-            <Route path="/" element={<Home creds={creds} debs={debs}/>} />
-            <Route path="/debits" element={<AddDebits debs={debs} creds={creds} debitEntries={debitEntries} handleDebitDataEntry={handleDebitDataEntry}/>} />
-            <Route path="/credits" element={<AddCredits creds={creds} debs={debs} creditEntries={creditEntries} handleCreditDataEntry={handleCreditDataEntry}/>} />
-            <Route path="/userProfile/*" element={<UserProfile />} />
+            <Route path="/assignmnt9/debits" element={<AddDebits debs={debs} creds={creds} debitEntries={debitEntries} handleDebitDataEntry={handleDebitDataEntry}/>} />
+            <Route path="/assignmnet9/credits" element={<AddCredits creds={creds} debs={debs} creditEntries={creditEntries} handleCreditDataEntry={handleCreditDataEntry}/>} />
+            <Route path="/assignment9/userProfile/*" element={<UserProfile />} />
         </Routes>
       </div>
     </Router>
